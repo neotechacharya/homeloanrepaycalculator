@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Use our free home loan prepayment calculator to estimate your savings on interest payments. Calculate the impact of one-time or monthly prepayments on your home loan EMI.">
+    <title>Home Loan Prepayment Calculator: Calculate Your Savings </title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- Schema Markup -->
+     <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "FinancialCalculator",
+          "name": "Home Loan Prepayment Calculator",
+          "description": "Calculate your potential savings by making prepayments on your home loan",
+          "url": "https://yourdomain.com/calculators/home-loan-prepayment-calculator"
+      }
+      </script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .fntsit {
+        font-size: 22px;
+      }
+      .twoboxe {
+        padding: 18px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="./assets/starter-template.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+ 
+
+  <main>
+    <div class="container">
+      <div class="calculator">
+          <h1>Home Loan Prepayment Calculator</h1>
+          <p class="text-lg text-gray-700">
+            Planning to make prepayments on your home loan? Our calculator helps you understand how much you can save in interest payments by making prepayments.
+        </p>
+          <div class="input-section">
+              <div>
+                  <div class="input-group">
+                      <label for="loanAmount">Loan Amount (₹)</label>
+                      <input type="number" id="loanAmount" value="2500000">
+                  </div>
+                  <div class="input-group">
+                      <label for="interestRate">Interest Rate (%)</label>
+                      <input type="number" id="interestRate" value="8.5" step="0.1">
+                  </div>
+                  <div class="input-group">
+                      <label for="loanTerm">Loan Term (Months)</label>
+                      <input type="number" id="loanTerm" value="240">
+                  </div>
+                  <div class="input-group">
+                      <label for="loanStartDate">Loan Start Date</label>
+                      <input type="date" id="loanStartDate">
+                  </div>
+              </div>
+              <div>
+                  <div class="prepayment-type">
+                      <label>Prepayment Type</label>
+                      <div class="radio-group">
+                          <label>
+                              <input type="radio" name="prepaymentType" value="oneTime" checked> One Time
+                          </label>
+                          <label>
+                              <input type="radio" name="prepaymentType" value="monthly"> Monthly
+                          </label>
+                      </div>
+                  </div>
+                  <div class="input-group">
+                      <label for="prepaymentAmount">Prepayment Amount (₹)</label>
+                      <input type="number" id="prepaymentAmount" value="100000">
+                  </div>
+                  <div class="input-group">
+                      <label for="prepaymentStartDate">Prepayment Start Date</label>
+                      <input type="date" id="prepaymentStartDate">
+                  </div>
+              </div>
+          </div>
+
+          <button class="calculate-btn" onclick="showResults()">Calculate</button>
+      </div>
+      <section class="max-w-4xl mx-auto mb-12 pt-5">
+        <h2 class="text-2xl font-bold mb-3">Benefits of Home Loan Prepayment</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow twoboxe">
+                <h3 class="text-xl font-semibold mb-2 fntsit">Reduced Interest Burden</h3>
+                <p class="text-gray-700 mb-0">Making prepayments on your home loan can significantly reduce your interest burden and loan tenure. Understanding the impact of prepayment helps you make informed financial decisions.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow twoboxe">
+                <h3 class="text-xl font-semibold mb-2 fntsit">Shorter Loan Tenure</h3>
+                <p class="text-gray-700 mb-0">Regular prepayments can help you become debt-free sooner by reducing your loan tenure, leading to substantial savings in interest payments.</p>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3 pt-5">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+          <div class="bg-white p-6 rounded-lg shadow twoboxe">
+              <h3 class="text-xl font-semibold mb-2 fntsit">What is home loan prepayment?</h3>
+              <p class="text-gray-700 mb-0">Home loan prepayment refers to paying extra amounts towards your loan principal beyond your regular EMI. This helps reduce your outstanding principal and consequently, the interest you pay.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow twoboxe">
+              <h3 class="text-xl font-semibold mb-2 fntsit">When should I consider prepayment?</h3>
+              <p class="text-gray-700 mb-0">Consider prepayment when you have surplus funds, receive a bonus, or get an increment. However, evaluate prepayment charges and tax benefits before making a decision.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow twoboxe">
+              <h3 class="text-xl font-semibold mb-2 fntsit">How does prepayment affect my loan?</h3>
+              <p class="text-gray-700 mb-0">Prepayment reduces your loan principal, which leads to lower interest payments over the loan tenure. You can either choose to reduce your EMI amount or decrease your loan tenure.</p>
+          </div>
+      </div>
+  </section>
+  </div>
+
+  <div class="modal" id="resultsModal">
+      <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <h2 class="mb-0 text-center">Calculation Results</h2>
+          <div class="in_ltr">
+          <div class="results-section">
+              
+              <div class="result-grid">
+                  <div class="result-item">
+                      <div class="result-label">Monthly EMI</div>
+                      <div class="result-value" id="emiResult">₹0</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Total Interest Without Prepayment</div>
+                      <div class="result-value" id="totalInterestResult">₹0</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">New Loan Term</div>
+                      <div class="result-value" id="newTermResult">0 months</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Total Interest With Prepayment</div>
+                      <div class="result-value" id="newInterestResult">₹0</div>
+                  </div>
+              </div>
+              <div class="savings-highlight" id="savingsResult">
+                  Total Savings: ₹0
+              </div>
+          </div>
+
+          <div class="qr-section">
+              <h2 style="font-size: 26px; font-weight: 600;">Your Contribution Matters</h2>
+              <p class="fn14 mb-0">Your generous support helps us create better tools for everyone. Scan to contribute any amount.</p>
+              <img class="ndimgsh" src="./assets/images/inmentlao44441232.png" alt="QR Code" width="200" height="200" style="margin: 20px 0;">
+             
+              <p style="margin: 15px 0;">Scan and pay with any UPI app</p>
+              <div>
+                
+                  <img src="./assets/images/UPI-Logo-vector.svg" alt="UPI Logo" width="140">
+              </div>
+              <div class="payment-apps">
+                  <img src="./assets/images/Google_Pay_Logo.svg" width="80" alt="Google Pay">
+                  <img src="./assets/images/PhonePe_Logo.svg" alt="Phone Pe" width="80">
+                  <img src="./assets/images/Paytm_Logo_(standalone).svg" alt="Paytm" width="80">
+                  <img src="./assets/images/Amazon_Pay_logo.svg" alt="Amazon Pay" width="80">
+              </div>
+          </div>
+          </div>
+
+      </div>
+  </div>
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    Created by the Neotech &middot; &copy; 2025
+  </footer>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./assets/nlogmn.js"></script> 
+  </body>
+</html>
